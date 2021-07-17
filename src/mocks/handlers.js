@@ -146,6 +146,7 @@ export const handlers = [
     }
   }),
 
+  //Creates a new color
   rest.post(`${urlBase}/colors`, (req, res, ctx) => {
     if (authenticator(req)) {
       if (req.body.color !== undefined && req.body.code !== undefined) {
@@ -166,6 +167,7 @@ export const handlers = [
     }
   }),
 
+  //Updates the color
   rest.put(`${urlBase}/colors/:id`, (req, res, ctx) => {
     if (authenticator(req)) {
       if (!req.params.id) {
@@ -198,6 +200,7 @@ export const handlers = [
     }
   }),
 
+  //Deletes color
   rest.delete(`${urlBase}/colors/:id`, (req, res, ctx) => {
     if (authenticator(req)) {
       if (!req.params.id)
