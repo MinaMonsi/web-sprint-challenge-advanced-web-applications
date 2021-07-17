@@ -45,14 +45,14 @@ Your finished project must include all of the following requirements. **Unlike o
 
 > _Build a login form to authenticate your users along with all the components and utilities needed to support authentication._
 
-- [ ] In `Login.js`, build all UI and state functionality needed to capture a username and password.
+- [x] In `Login.js`, build all UI and state functionality needed to capture a username and password.
 - [ ] **Make sure that the input for your username and password includes the id="username" and id="password" attributes. Also make sure the submit button for this form contains the id="error" attribute. Codegrade autotests will fail without them.**
 - [ ] Build in functionality that would allow an error to be displayed in the provided p tag if either the username or password is incorrect.
 - [ ] **Make sure your error p tag has an id="error" attribute attached. Codegrade autotests will fail without them.**
-- [ ] Construct an http request that retrieves an auth token from the server when the username `Lambda` and the password `School` is passed into the request.
-- [ ] Save the token to localStorage.
-- [ ] Build a `axiosWithAuth` module within the helpers folder to create an instance of axios with the authentication header.
-- [ ] Build a `PrivateRoute` component within the components folder and use it to protect the route that renders the `BubblesPage` component.
+- [x] Construct an http request that retrieves an auth token from the server when the username `Lambda` and the password `School` is passed into the request.
+- [x] Save the token to localStorage.
+- [x] Build a `axiosWithAuth` module within the helpers folder to create an instance of axios with the authentication header.
+- [x] Build a `PrivateRoute` component within the components folder and use it to protect the route that renders the `BubblesPage` component.
 - [ ] In `App.js`, build the backend to the logout button. When pressed, send an http request to the logout endpoint and remove the authentication token from localStorage. Use window.location.href to redirect to the login page.
 
 #### Consuming the API
@@ -80,11 +80,18 @@ Your finished project must include all of the following requirements. **Unlike o
 
 #### API Documentation
 
+<!-- Creates a token for login -->
+
 - **[POST]** \* to `http://localhost:5000/api/login`: returns a token to be added to the header of all other requests. Pass in the following credentials as the `body` of the request: `{ username: 'Lambda', password: 'School' }`
+<!-- Creates token for logout -->
 - **[POST]** \* to `http://localhost:5000/api/logout`: returns a token to be added to the header of all other requests.
+<!-- Reads data -->
 - **[GET]** to `http://localhost:5000/api/colors`: returns the list of colors and their hex codes. This endpoint canYeah only be accessed by an autheticated user.
+<!-- Creates new color -->
 - **[POST]** to `http://localhost:5000/api/colors`: creates a new color object. Pass the color as the `body` of the request (the second argument passed to `axios.post`). This endpoint can only be accessed by an autheticated user.
+<!-- Updates the color-->
 - **[PUT]** to `http://localhost:5000/api/colors/:id`: updates the color using the `id` passed as part of the URL. Send the color object with the updated information as the `body` of the request (the second argument passed to `axios.put`). This endpoint can only be accessed by an authenticated user.
+<!-- Deletes a color -->
 - **[DELETE]** to `http://localhost:5000/api/colors/123`: removes the color using the `id` passed as part of the URL (123 in example). This endpoint can only be accessed by an autheticated user.
 
 #### Hex Color Examples
