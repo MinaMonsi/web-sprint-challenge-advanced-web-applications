@@ -5,10 +5,14 @@ import { render, screen} from "@testing-library/react";
 import ColorList from './ColorList';
 
 test("Renders an empty list of colors without errors", () => {
+    render(<ColorList />);
+    screen.debug();
 });
 
 test("Renders a list of colors without errors", () => {
+    render(<ColorList />);
 });
 
 test("Renders the EditForm when editing = true and does not render EditForm when editing = false", () => {
+    render(<ColorList />);
 });
